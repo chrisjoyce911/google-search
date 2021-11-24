@@ -6,7 +6,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/rocketlaunchr/google-search"
+	googlesearch "github.com/dirkh24/google-search"
 )
 
 var ctx = context.Background()
