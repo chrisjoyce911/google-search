@@ -14,6 +14,23 @@
 
 Quickly scrape Google Search Results.
 
+
+### Diverging Fork Notice
+
+This repository, `chrisjoyce911/google-search`, is a **diverging fork** of the original [rocketlaunchr/google-search](https://github.com/rocketlaunchr/google-search). While it was initially based on the original implementation, this repository is now evolving independently with the following goals and differences:
+
+- **Key Changes**:
+  - Expanded functionality to integrate Google Ads AI into the search engine results.
+  - Added support for local search (Map Pack) to enhance localized search capabilities.
+
+- **Compatibility**:
+  - This fork may not be fully backward-compatible with the original.
+  - For the original implementation and its maintenance, refer to [rocketlaunchr/google-search](https://github.com/rocketlaunchr/google-search).
+
+By forking and diverging, I aim to address specific needs and use cases while contributing to the broader open-source ecosystem.
+
+
+
 ## Example Search
 
 ```go

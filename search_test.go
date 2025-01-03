@@ -1,23 +1,22 @@
 // Copyright 2020-21 PJ Engineering and Business Solutions Pty. Ltd. All rights reserved.
 
-package googlesearch_test
+package googlesearch
 
 import (
+	"context"
 	"testing"
-
-	googlesearch "github.com/rocketlaunchr/google-search"
 )
 
 func TestSearch(t *testing.T) {
 
 	q := "Hello World"
 
-	opts := googlesearch.SearchOptions{
+	opts := SearchOptions{
 		Limit: 20,
 	}
 
 	//lint:ignore SA1012 ignore this bare essentials by passing nil for context and removing context package (despite not being idiomatic go).
-	returnLinks, err := googlesearch.Search(nil, q, opts)
+	returnLinks, err := Search(nil, q, opts)
 	if err != nil {
 		t.Errorf("something went wrong: %v", err)
 		return
@@ -57,6 +56,8 @@ func TestRelatedSearch(t *testing.T) {
 	opts := SearchOptions{
 		Limit: 20,
 	}
+
+	ctx := context.Background()
 
 	returnLinks, related, err := RelatedSearch(ctx, q, opts)
 	if err != nil {
@@ -181,7 +182,7 @@ func Test_buildUrl(t *testing.T) {
 	}
 }
 
-func Test_getStart(t *testing.T) {
+func Test_GetStart(t *testing.T) {
 
 	tests := []struct {
 		name string
@@ -202,7 +203,7 @@ func Test_getStart(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := getStart(tt.uri); got != tt.want {
-				t.Errorf("getStart() = %v, want %v", got, tt.want)
+				t.Errorf("GetStart() = %v, want %v", got, tt.want)
 			}
 		})
 	}

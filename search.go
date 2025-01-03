@@ -1,4 +1,5 @@
 // Copyright 2020-22 PJ Engineering and Business Solutions Pty. Ltd. All rights reserved.
+// Modified 2025 by Chris Joyce for enhancements and independent development.
 
 package googlesearch
 

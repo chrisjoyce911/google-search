@@ -1,6 +1,7 @@
 package googlesearch
 
 import (
+	"context"
 	"fmt"
 	"strings"
 	"time"
