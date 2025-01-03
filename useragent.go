@@ -1,5 +1,5 @@
 // This file is programmatically generated
-// Do not manualy update
+// Do not manually update
 // go run useragent/main.go
 
 package googlesearch
